@@ -10,13 +10,17 @@ class Admin extends CI_Controller {
     }
 
     function index() {
-        echo "Admin";
+        $data["content"]="admin";
+        $this->load->view("template",$data);
     }
 
     function logout() {
         $this->session->unset_userdata("id");
         $this->session->unset_userdata("login");
         redirect("login");
+    }
+    function newpost(){
+        
     }
 
 }
